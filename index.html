@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kii Pasaribu | Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Patua+One&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;1,700&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                fontFamily: {
+                  inter: ["Inter"],
+                  jakarta: ["Plus Jakarta Sans"],
+                  bebas: ["Bebas Neue"],
+                },
+                colors: {
+                  primary: "#222",
+                },
+                maxWidth: {
+                  inner: "1920px",
+                },
+                padding: {
+                  padInner: "52px",
+                },
+                maxHeight: {
+                  202: 'calc(100vh - 90px)',
+                },
+                animation: {
+                  spinSlow: "spin 3.5s linear infinite",
+                  spinSlowRight: "spinSlowRight 3s linear infinite",
+                  slideShow: "slideFrames 25s linear infinite",
+                  slideRight: "slideRight 25s linear infinite",
+                  wave: "waveHand 3s linear infinite ",
+                },
+                keyframes: {
+                  slideFrames: {
+                    "0%": {transform: 'translateX(0)'},
+                    "100%": {transform: 'translateX(-150%)'},
+                  },
+                  slideRight: {
+                    "0%": {transform: 'translateX(-150%)'},
+                    "100%": {transform: 'translateX(0)'},
+                  },
+                  spinSlowRight: {
+                    "0%": {transform: 'rotate(360deg)'},
+                    "100%": {transform: 'rotate(0deg)'}
+                  },
+                  waveHand: {
+                    "0%": { transform: 'rotate( 0.0deg)' },
+                    "10%": { transform: 'rotate(14.0deg)' },
+                    "20%": { transform: 'rotate(-8.0deg)' },
+                    "30%": { transform: 'rotate(14.0deg)' },
+                    "40%": { transform: 'rotate(-4.0deg)' },
+                    "50%": { transform: 'rotate(10.0deg)' },
+                    "60%": { transform: 'rotate( 0.0deg)' },
+                    "100%": { transform: 'rotate( 0.0deg)' },
+                  }
+                }
+              },
+            },
+          };
+    </script>
+  </head>
+  <body
+    class="text-base w-full h-full mx-auto bg-primary font-jakarta text-white"
+  >
+    <!-- NAVBAR START -->
+    <nav class="m-5 flex items-center relative justify-between font-bebas">
+      <h1 class="text-4xl" id="logo__typo">Kii</h1>
+      <button
+        id="menu__btn"
+        class="fixed right-9 -top-1 hover:opacity-80 transition-opacity px-6 z-50 bg-white text-primary pt-3 py-1 rounded-md"
+      >
+        Menu
+      </button>
+    </nav>
+    <div
+      id="menu__list"
+      class="z-50 -translate-y-full h-full w-full bg-primary fixed top-0 overflow-hidden transition-all duration-500"
+      
+    >
+      <div class="m-5 flex items-center relative justify-between font-bebas">
+        <h1 class="text-4xl">Kii</h1>
+        <button
+          id="close__btn"
+          class="fixed right-9 -top-1 hover:opacity-80 transition-opacity px-6 bg-white text-primary pt-3 py-1 rounded-md"
+        >
+          Close
+        </button>
+      </div>
+      <div class="mx-5 flex flex-col justify-center content-between text-5xl">
+        <ul class="mt-14">
+          <div class="mb-8 overflow-hidden">
+            <li
+              style="transition-delay: 300ms"
+              class="-translate-y-[105%] font-bold transition-transform transition__down"
+            >
+              <a
+                href="#home"
+                class="hover:text-neutral-300 transition-colors delay-100"
+                >Home
+                <img
+                  class="w-12 inline"
+                  src="https://img.icons8.com/3d-fluency/52/home.png"
+                  alt="home"
+              /></a>
+            </li>
+          </div>
+
+          <div class="mb-8 h-full overflow-hidden">
+            <li
+              style="transition-delay: 400ms"
+              class="-translate-y-[105%] font-bold transition-transform transition__down"
+            >
+              <a
+                href="#project"
+                class="hover:text-neutral-300 transition-colors delay-100"
+                >Projects
+                <img
+                  class="w-12 inline"
+                  src="https://img.icons8.com/3d-fluency/94/documents.png"
+                  alt="documents"
+                />
+              </a>
+            </li>
+          </div>
+
+          <div class="mb-8 overflow-hidden">
+            <li
+              style="transition-delay: 500ms"
+              class="-translate-y-[105%] font-bold transition-transform transition__down"
+            >
+              <a
+                href="#about"
+                class="hover:text-neutral-300 transition-colors delay-100"
+                >About
+                <img
+                  class="w-12 inline"
+                  src="https://img.icons8.com/3d-fluency/94/info.png"
+                  alt="info"
+                />
+              </a>
+            </li>
+          </div>
+
+          <div class="mb-8 overflow-hidden">
+            <li
+              style="transition-delay: 600ms"
+              class="-translate-y-[105%] font-bold transition-transform transition__down"
+            >
+              <a
+                href="#contact"
+                class="hover:text-neutral-300 transition-colors delay-100"
+                >Contacts
+                <img
+                  class="w-12 inline"
+                  src="https://img.icons8.com/3d-fluency/94/paper-plane.png"
+                  alt="paper-plane"
+                />
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div
+        class="flex justify-between items-center p-4 absolute w-full h-14 bottom-0"
+      >
+        <h1 class="italic">Follow me</h1>
+        <div class="flex items-center">
+          <img
+            class="mx-3 w-10"
+            src="https://img.icons8.com/?size=50&id=KxHlias9AgZt&format=png"
+            alt="Twitter Logo"
+          />
+          <img
+            class="w-10 mx-3"
+            src="https://img.icons8.com/3d-fluency/94/linkedin.png"
+            alt="linkedin"
+          />
+          <img
+            class="mx-3 w-10"
+            src="https://img.icons8.com/3d-fluency/94/instagram-new.png"
+            alt="instagram-new"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR END -->
+
+    <!-- SECTION HOME START -->
+    <section id="home" class="w-full h-202">
+      <div class="px-5">
+        <img class="w-full h-auto" src="hello.svg" alt="Hello There" />
+      </div>
+
+      <div class="flex w-full h-auto justify-center mt-5">
+        <div
+          class="test flex relative justify-center items-center w-[80%] sm:w-[25%] xl:w-[20%] p-4 pt-0"
+        >
+          <img class="w-28" src="Avatar.svg" alt="Avatar" />
+          <img
+            class="w-12 absolute bottom-0 right-0 animate-spinSlow"
+            src="https://img.icons8.com/3d-fluency/94/star.png"
+            alt="star"
+          />
+        </div>
+        <div class="xl:w-[50%] h-auto p-4 pt-0">
+          <h1 class="text-2xl italic">My name</h1>
+          <p class="text-3xl xl:text-7xl lg:text-5xl md:text-4xl font-bold">Tambah Riski Martinus</p>
+        </div>
+      </div>
+
+      <div class="w-full h-auto flex font-bebas overflow-hidden mt-3">
+        <div class="w-full flex gap-12 whitespace-nowrap animate-slideShow">
+          <h1 class="text-5xl text-red-500">
+            WEB DEVELOPER<img
+              class="w-12 inline animate-spinSlowRight"
+              src="https://img.icons8.com/3d-fluency/94/domain.png"
+              alt="domain"
+            />
+          </h1>
+          <h1 class="text-5xl text-white">
+            GRAPHIC DESIGNER
+            <img
+              class="w-12 inline animate-wave rotate-90"
+              src="https://img.icons8.com/3d-fluency/94/pen.png"
+              alt="pen"
+            />
+          </h1>
+
+          <h1 class="text-5xl text-red-500">
+            WEB DEVELOPER
+            <img
+              class="w-12 inline animate-spinSlowRight"
+              src="https://img.icons8.com/3d-fluency/94/domain.png"
+              alt="domain"
+            />
+          </h1>
+          <h1 class="text-5xl text-white">GRAPHIC DESIGNER
+            <img
+              class="w-12 inline animate-wave rotate-90"
+              src="https://img.icons8.com/3d-fluency/94/pen.png"
+              alt="pen"
+            />
+          </h1>
+          <h1 class="text-5xl text-red-500">
+            WEB DEVELOPER
+            <img
+              class="w-12 inline animate-spinSlowRight"
+              src="https://img.icons8.com/3d-fluency/94/domain.png"
+              alt="domain"
+            />
+          </h1>
+          <h1 class="text-5xl text-white">GRAPHIC DESIGNER
+            <img
+              class="w-12 inline animate-wave rotate-90"
+              src="https://img.icons8.com/3d-fluency/94/pen.png"
+              alt="pen"
+            />
+          </h1>
+
+          <h1 class="text-5xl text-red-500">
+            WEB DEVELOPER
+            <img
+              class="w-12 inline animate-spinSlowRight"
+              src="https://img.icons8.com/3d-fluency/94/domain.png"
+              alt="domain"
+            />
+          </h1>
+          <h1 class="text-5xl text-white">GRAPHIC DESIGNER
+            <img
+              class="w-12 inline animate-wave rotate-90"
+              src="https://img.icons8.com/3d-fluency/94/pen.png"
+              alt="pen"
+            />
+          </h1>
+        </div>
+      </div>
+      <div class="w-full h-auto flex font-bebas overflow-hidden mt-0">
+        <div class="w-full flex gap-12 whitespace-nowrap animate-slideRight">
+          <h1 class="text-5xl text-red-500">
+            WEB DEVELOPER
+            <img
+              class="w-12 inline animate-spinSlow"
+              src="https://img.icons8.com/3d-fluency/94/domain.png"
+              alt="domain"
+            />
+          </h1>
+          <h1 class="text-5xl text-white">GRAPHIC DESIGNER
+            <img
+              class="w-12 inline animate-wave rotate-90"
+              src="https://img.icons8.com/3d-fluency/94/pen.png"
+              alt="pen"
+            />
+          </h1>
+
+          <h1 class="text-5xl text-red-500">
+            WEB DEVELOPER
+            <img
+              class="w-12 inline animate-spinSlow"
+              src="https://img.icons8.com/3d-fluency/94/domain.png"
+              alt="domain"
+            />
+          </h1>
+          <h1 class="text-5xl text-white">GRAPHIC DESIGNER
+            <img
+              class="w-12 inline animate-wave rotate-90"
+              src="https://img.icons8.com/3d-fluency/94/pen.png"
+              alt="pen"
+            />
+          </h1>
+          <h1 class="text-5xl text-red-500">
+            WEB DEVELOPER
+            <img
+              class="w-12 inline animate-spinSlowRight"
+              src="https://img.icons8.com/3d-fluency/94/domain.png"
+              alt="domain"
+            />
+          </h1>
+          <h1 class="text-5xl text-white">GRAPHIC DESIGNER
+            <img
+              class="w-12 inline animate-wave rotate-90"
+              src="https://img.icons8.com/3d-fluency/94/pen.png"
+              alt="pen"
+            />
+          </h1>
+
+          <h1 class="text-5xl text-red-500">
+            WEB DEVELOPER
+            <img
+              class="w-12 inline animate-spinSlow"
+              src="https://img.icons8.com/3d-fluency/94/domain.png"
+              alt="domain"
+            />
+          </h1>
+          <h1 class="text-5xl text-white">GRAPHIC DESIGNER
+            <img
+              class="w-12 inline animate-wave rotate-90"
+              src="https://img.icons8.com/3d-fluency/94/pen.png"
+              alt="pen"
+            />
+          </h1>
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-5 justify-center items-center w-full h-auto">
+        <h1 class="font-bold text-xs">Scroll down</h1>
+        <img class="w-8 inline animate-bounce mt-3" src="https://img.icons8.com/3d-fluency/94/down.png" alt="down">
+      </div>
+    </section>
+    <!-- SECTION HOME END -->
+
+    <!-- SECTION PROJECTS START -->
+    <section id="project" class="w-full h-full">
+      <div class="w-full flex-col flex justify-center items-center">
+        <img class="w-32" src="9.svg" alt="Love">
+        <h1 class="font-bebas text-5xl sm:text-6xl lg:text-7xl">PROJECTS
+          <img
+                  class="w-14 inline"
+                  src="https://img.icons8.com/3d-fluency/94/documents.png"
+                  alt="documents"
+                />
+        </h1>
+      </div>
+      <div class="w-full flex items-center mt-2 justify-center text-xs flex-wrap gap-3 ">
+        <div class="flex justify-center">
+        <a class="text-white  py-2 px-6 border border-purple-900 hover:bg-primary rounded-3xl bg-purple-900 transition-colors delay-100" href="#">Project Based-Learning</a>
+      </div>
+      <div class=" flex justify-center">
+        <a class="text-white py-2 px-6 border  border-purple-900 rounded-3xl hover:bg-purple-900 transition-colors delay-100" href="#">Fun Project</a>
+      </div>
+      <div class=" flex justify-center">
+        <a class="text-white py-2 px-6 border border-purple-900 rounded-3xl hover:bg-purple-900 transition-colors delay-100" href="#">Freelance Project</a>
+      </div>
+      </div>
+
+      <div class="mt-2 p-4 w-full h-auto flex-wrap flex  2xl:flex-wrap lg:flex-wrap justify-center md:flex-wrap sm:flex-wrap gap-5 sm:p-5">
+
+        <div id="project__list" class="project__list w-[400px] h-[14rem] bg-black relative rounded-md">
+          <a href="#" class="project__hover w-full absolute h-full z-20 scale-0 transition-all">
+          <img class="absolute z-50 w-full h-full object-cover object-center rounded-md" src="mockup.png" alt="">
+          </a>
+          <div class="w-full h-full bg-black absolute opacity-40">
+          <img class="w-full h-full object-center object-cover rounded-md absolute" src="mockup.png" alt="">
+        </div>
+          <div class="w-full h-full absolute">
+            <div class="w-full absolute p-2 flex justify-between top-0">
+              <h1 class="text-white text-2xl font-bold"><a href="#"></a>PERPIUS</h1>
+              <img class="w-12" src="5.svg" alt="">
+            </div>
+            <div class="w-full absolute p-2 flex justify-between bottom-0">
+              <h2 class="text-base font-bebas"><a href="#"></a >#Project Based-Learning</h2>
+            </div>
+          </div>
+        </div>
+
+        <div id="project__list" class="w-[400px] h-[14rem] bg-black relative rounded-md">
+          <a href="#" class="project__hover w-full absolute h-full z-20 scale-0 transition-all">
+          <img class="absolute z-50 w-full h-full object-cover object-center rounded-md" src="mockup1.jpg" alt="">
+          </a>
+          <div class="w-full h-full bg-black absolute opacity-40">
+          <img class="w-full h-full object-center object-cover rounded-md absolute" src="mockup1.jpg" alt="">
+        </div>
+          <div class="w-full h-full absolute">
+            <div class="w-full absolute p-2 flex justify-between top-0">
+              <h1 class="text-white text-2xl font-bold"><a href="#"></a>DESIGN-CLOTHING</h1>
+              <img class="w-12" src="5.svg" alt="">
+            </div>
+            <div class="w-full absolute p-2 flex justify-between bottom-0">
+              <h2 class="text-base font-bebas"><a href="#"></a >#FUNPROJECT</h2>
+            </div>
+          </div>
+        </div>
+
+        <div id="project__list" class="w-[400px] h-[14rem] bg-black relative rounded-md">
+          <a href="#" class="project__hover w-full absolute h-full z-20 scale-0 transition-all">
+          
+          <img class="absolute z-50 w-full h-full object-cover object-center rounded-md" src="mockup2.jpg" alt="">
+          </a>
+          <div class="w-full h-full bg-black absolute opacity-40">
+          <img class="w-full h-full object-center object-cover rounded-md absolute" src="mockup2.jpg" alt="">
+        </div>
+          <div class="w-full h-full absolute">
+            <div class="w-full absolute p-2 flex justify-between top-0">
+              <h1 class="text-white text-2xl font-bold"><a href="#"></a>DESIGN-CLOTHING</h1>
+              <img class="w-12" src="5.svg" alt="">
+            </div>
+            <div class="w-full absolute p-2 flex justify-between bottom-0">
+              <h2 class="text-base font-bebas"><a href="#"></a >#FUNPROJECT</h2>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- SECTION PROJECT END -->
+
+
+    <section id="about" class="w-full h-full">
+      <div class="w-full flex-col flex justify-center items-center">
+        <img class="w-32" src="16.svg" alt="Love">
+        <h1 class="font-bebas text-5xl sm:text-6xl lg:text-7xl mt-3">So, Who am <span class="text-purple-500">I</span> ?
+          <img
+                  class="w-14 inline lg:w-16"
+                  src="https://img.icons8.com/3d-fluency/94/info.png"
+                  alt="info"
+                />
+        </h1>
+      </div>
+      <div class="w-full flex justify-center px-4 lg:px-20 lg:py-5">
+      <div class="lg:w-[60%] xl:w[70%] md:w-[80%] w-full p-4 flex my-5 rounded-md">
+        <div class="w-full py-5 px-10 grid place-items-center h-full">
+          <img class="w-28" src="Avatar.svg" alt="Avatar">
+        </div>
+
+        <div class="w-full h-full flex justify-center flex-col">
+          <h2 class="text-4xl lg:text-6xl font-bold">I'am </h2> <br>
+          <p class="text-purple-500 text-xs xl:text-2xl font-bebas lg:text-xl md:text-base sm:text-sm">Front-End Developer <br> 
+          <p class="text-xs xl:text-2xl lg:text-xl md:text-base font-bebas sm:text-sm text-orange-500"> Graphic Designer</p></p>
+        </div>
+      </div>
+    </div>
+
+      <div class="w-full mt-2">
+        <div class="w-full flex justify-center">
+        <h1 class="text-5xl font-bebas">What I Use?</h1>
+        </div>
+
+        
+        <div class="flex flex-wrap px-5 justify-center gap-10 mt-4 w-full">
+        <div class="p-2 pb-7 rounded text-primary relative flex justify-center w-full lg:w-[80%] xl:w-[70%] h-full bg-primary shadow-md shadow-orange-500">
+          <img class="w-16 lg:w-20 xl:w-28" src="https://img.icons8.com/3d-fluency/240/adobe-photoshop.png" alt="adobe-photoshop"/>
+          <img class="w-16 lg:w-20 xl:w-28" src="https://img.icons8.com/3d-fluency/240/adobe-illustrator.png" alt="adobe-illustrator"/>
+          <img class="w-16 lg:w-20 xl:w-28" src="https://img.icons8.com/3d-fluency/240/adobe-lightroom.png" alt="adobe-lightroom"/>
+          <div class="font-bebas text-4xl absolute bg-white -bottom-7 flex py-2 px-6 rounded">
+            <h1 class="">JUNIOR</h1>
+          </div>
+        </div>
+        </div>
+
+      </div>
+
+      <div class="w-full mt-12">
+        <div class="w-full flex justify-center">
+        <h1 class="text-5xl font-bebas">Skills?</h1>
+        </div>
+
+        <div class="flex flex-wrap px-5 justify-center gap-10 mt-4 w-full">
+
+          <div class="p-2 pb-5 rounded text-primary relative flex justify-center w-full  xl:w-[50%] lg:w-[70%] md:w-[80%] h-full bg-primary shadow-md shadow-purple-500">
+            <img class="w-28" src="5.svg" alt="">
+          <div class="font-bebas text-4xl absolute bg-white -bottom-7 flex py-2 px-6 rounded">
+            <h1 class="">JUNIOR</h1>
+          </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="border-b mt-14 w-full border-b-slate-500"></div>
+    </section>
+
+    <section id="contact" class="w-full h-full">
+      <div class="w-full flex-col flex justify-center items-center">
+        <img class="w-32" src="8.svg" alt="Love">
+        <h1 class="font-bebas text-5xl sm:text-6xl lg:text-7xl">contact me
+          <img
+                  class="w-14 inline"
+                  src="https://img.icons8.com/3d-fluency/94/paper-plane.png"
+                  alt="info"
+                />
+        </h1>
+      </div>
+
+      <div class="w-full h-full bg-primary  p-5 font-bebas">
+        <div class="w-full h-full shadow-lg  rounded-md p-5 flex justify-center">
+          <form class="w-full lg:w-[70%] md:w-[80%]">
+            
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-white text-xs  mb-2" for="grid-first-name">
+                  First Name
+                </label>
+                <input class="appearance-none block w-full bg-primary border border-purple-500 text-white rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-purple-500" id="grid-fr-none type="text" placeholder="Aku">
+              </div>
+              <div class="w-full md:w-1/2 px-3">
+                <label class="block uppercase tracking-wide text-white text-xs  mb-2" for="grid-last-name">
+                  Last Name
+                </label>
+                <input class="appearance-none block w-full bg-primary text-white border border-purple-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-purple-500 focus:border-none" id="grid-last-name" type="text" placeholder="Sayang">
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-white text-xs  mb-2" for="grid-password">
+                  E-mail
+                </label>
+                <input class="appearance-none block w-full bg-primary text-white border border-purple-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-purple-500 focus:border-none" id="email" type="email">
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-white text-xs  mb-2" for="grid-password">
+                  Message
+                </label>
+                <textarea class=" no-resize appearance-none block w-full bg-primary text-white border border-purple-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-purple-500 focus:border-none h-48 resize-none" id="message"></textarea>
+              </div>
+            </div>
+            <button class="w-full bg-purple-500 text-white py-3 rounded-md">SEND</button>
+          </form>
+        </div>
+      </div>
+      
+    <div
+    class="flex justify-between items-center p-4 w-full h-14"
+  >
+    <h1 class="italic">Follow me</h1>
+    <div class="flex items-center">
+      <img
+        class="mx-3 w-10"
+        src="https://img.icons8.com/?size=50&id=KxHlias9AgZt&format=png"
+        alt="Twitter Logo"
+      />
+      <img
+        class="w-10 mx-3"
+        src="https://img.icons8.com/3d-fluency/94/linkedin.png"
+        alt="linkedin"
+      />
+      <img
+        class="mx-3 w-10"
+        src="https://img.icons8.com/3d-fluency/94/instagram-new.png"
+        alt="instagram-new"
+      />
+    </div>
+    </section>
+
+
+
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const menuList = document.getElementById("menu__list");
+    const menuBtn = document.getElementById("menu__btn");
+    const closeBtn = document.getElementById("close__btn");
+    const logo = document.getElementById("logo__typo");
+    const listItem = document.querySelectorAll(".transition__down");
+    const hoverScale = document.querySelectorAll("#project__list");
+    const projectHover = document.querySelectorAll (".project__hover");
+
+    projectHover.forEach((e) => {
+      console.log(e);
+    })
+
+    hoverScale.forEach((e) => {
+      e.addEventListener("mouseover", (e) => {
+        e.currentTarget.childNodes[1].classList.remove("scale-0");
+        e.currentTarget.childNodes[1].classList.add("scale-75");
+      })
+    })
+
+    hoverScale.forEach((e) => {
+      e.addEventListener("mouseout", (e) => {
+        e.currentTarget.childNodes[1].classList.remove("scale-75");
+        e.currentTarget.childNodes[1].classList.add("scale-0");
+      })
+    })
+
+
+    menuBtn.addEventListener("click", (e) => {
+      if (menuList.classList.contains("-translate-y-full")) {
+        menuList.classList.remove("-translate-y-full");
+        listItem.forEach((e) => {
+          e.classList.remove("-translate-y-[105%]");
+        });
+        menuBtn.style.display = "visibility:hidden";
+        logo.style.display = "visibility:hidden";
+      } else {
+        menuList.classList.add("-translate-y-full");
+
+        listItem.forEach((e) => {
+          e.classList.add("-translate-y-[105%]");
+        });
+        menuBtn.style.display = "block";
+        logo.style.display = "block";
+      }
+    });
+
+    listItem.forEach((e) => {
+      e.addEventListener("click", function() {
+        menuList.classList.add("-translate-y-full");
+          e.classList.add("-translate-y-[105%]");
+      })
+    })
+
+    closeBtn.addEventListener("click", (e) => {
+      if (menuList.classList.contains("-translate-y-full")) {
+        menuList.classList.remove("-translate-y-full");
+
+        listItem.forEach((e) => {
+          e.classList.remove("-translate-y-[105%]");
+        });
+        closeBtn.style.display = "visibility:hidden";
+        logo.style.display = "visibility:hidden";
+      } else {
+        menuList.classList.add("-translate-y-full");
+        listItem.forEach((e) => {
+          e.classList.add("-translate-y-[105%]");
+        });
+        menuBtn.style.display = "block";
+        logo.style.display = "block";
+      }
+    });
+  </script>
+</html>
